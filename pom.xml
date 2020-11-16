@@ -38,12 +38,13 @@
 
     <spring.framework.version>3.1.2.RELEASE</spring.framework.version>
 
-    <osgi.version>5.0.0</osgi.version>
+    <osgi.version>6.0.0</osgi.version>
+    <osgi-compendium.version>5.0.0</osgi-compendium.version>
     <osgi-enterprise.version>5.0.0</osgi-enterprise.version>
-    <karaf.version>4.0.9</karaf.version>
-    <apache.felix.version>4.4.1</apache.felix.version>
+    <karaf.version>4.2.10</karaf.version>
+    <apache.felix.version>5.6.10</apache.felix.version>
 
-    <junit.version>4.11</junit.version>
+    <junit.version>4.12</junit.version>
     <paxexam.version>4.11.0</paxexam.version>
     <logback.version>0.9.20</logback.version>
     <mockito.version>1.9.5</mockito.version>
@@ -79,7 +80,7 @@
       <dependency>
         <groupId>org.osgi</groupId>
         <artifactId>org.osgi.compendium</artifactId>
-        <version>${osgi.version}</version>
+        <version>${osgi-compendium.version}</version>
       </dependency>
       <dependency>
         <groupId>org.osgi</groupId>
@@ -428,9 +429,13 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>camunda-nexus</id>
-      <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-community-extensions-snapshots</url>
+      <id>ideasoft.snapshots</id>
+      <url>http://nexus.ideasoft.uy:8081/repository/snapshots</url>
     </snapshotRepository>
+<!--    <snapshotRepository>-->
+<!--      <id>camunda-nexus</id>-->
+<!--      <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-community-extensions-snapshots</url>-->
+<!--    </snapshotRepository>-->
     <repository>
       <id>camunda-nexus</id>
       <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-community-extensions</url>
