@@ -11,12 +11,12 @@
   <name>Camunda BPM - OSGi - Root</name>
   <groupId>org.camunda.bpm.extension.osgi</groupId>
   <artifactId>camunda-bpm-osgi-root</artifactId>
-  <version>5.2.0-SNAPSHOT</version>
+  <version>5.2.0-k4.2</version>
   <packaging>pom</packaging>
 
   <modules>
     <module>camunda-bpm-osgi</module>
-	<module>camunda-bpm-karaf-feature</module>
+	  <module>camunda-bpm-karaf-feature</module>
     <module>camunda-bpm-blueprint-wrapper</module>
     <module>camunda-bpm-karaf-commands</module>
     <module>camunda-bpm-karaf-assembly</module>
@@ -79,8 +79,8 @@
       </dependency>
       <dependency>
         <groupId>org.osgi</groupId>
-        <artifactId>org.osgi.compendium</artifactId>
-        <version>${osgi-compendium.version}</version>
+        <artifactId>osgi.cmpn</artifactId>
+        <version>${osgi.version}</version>
       </dependency>
       <dependency>
         <groupId>org.osgi</groupId>
@@ -428,18 +428,24 @@
   </scm>
 
   <distributionManagement>
-    <snapshotRepository>
-      <id>ideasoft.snapshots</id>
-      <url>http://nexus.ideasoft.uy:8081/repository/snapshots</url>
-    </snapshotRepository>
+      <repository>
+        <id>ideasoft-releases-upload</id>
+        <name>Ideasoft Releases Upload</name>
+        <url>http://nexus.ideasoft.uy:8081/repository/releases</url>
+      </repository>
+      <snapshotRepository>
+        <id>ideasoft-snapshots-upload</id>
+        <name>Ideasoft Snapshots Upload</name>
+        <url>http://nexus.ideasoft.uy:8081/repository/snapshots</url>
+      </snapshotRepository>
 <!--    <snapshotRepository>-->
 <!--      <id>camunda-nexus</id>-->
 <!--      <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-community-extensions-snapshots</url>-->
 <!--    </snapshotRepository>-->
-    <repository>
-      <id>camunda-nexus</id>
-      <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-community-extensions</url>
-    </repository>
+<!--    <repository>-->
+<!--      <id>camunda-nexus</id>-->
+<!--      <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-community-extensions</url>-->
+<!--    </repository>-->
   </distributionManagement>
 
   <issueManagement>
